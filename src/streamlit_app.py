@@ -106,7 +106,7 @@ import torch
 
 @st.cache_resource
 def load_summarizer():
-    model_name = "sshleifer/distilbart-cnn-12-6"
+    model_name = "Falconsai/text_summarization"
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
     return tokenizer, model
@@ -114,7 +114,7 @@ def load_summarizer():
 # QA Model Initialization
 @st.cache_resource
 def load_qa_model():
-    model_name = "deepset/roberta-base-squad2-distilled"
+    model_name = "deepset/minilm-uncased-squad2"
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     model = AutoModelForQuestionAnswering.from_pretrained(model_name)
     return tokenizer, model
