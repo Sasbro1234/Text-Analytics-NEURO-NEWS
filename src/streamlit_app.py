@@ -730,6 +730,9 @@ if st.session_state.page == "home":
     
     st.markdown("<br>", unsafe_allow_html=True)
     if st.button("INITIALIZE SYSTEM", key="start_btn"):
+        st.cache_resource.clear()
+        import gc
+        gc.collect()
         st.session_state.page = "upload"
         st.rerun()
 
@@ -763,6 +766,9 @@ else:
     
     selected_key = label_to_key[selected_label]
     if selected_key != st.session_state.page:
+        st.cache_resource.clear()
+        import gc
+        gc.collect()
         st.session_state.page = selected_key
         st.rerun()
 
