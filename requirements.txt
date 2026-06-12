@@ -1,0 +1,15 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
+streamlit
+pandas
+scikit-learn
+transformers
+datasets
+nltk
+pyspellchecker
+openpyxl
+wordcloud
+plotly
+matplotlib
+scipy
+sentencepiece
